@@ -1,1 +1,2 @@
-sachin has 100 centuries.No matter what sachin is God of the Cricket.
+I am resetting sachin file using promises
+Sachin is Well known as Master Blaster!

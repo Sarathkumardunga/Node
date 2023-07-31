@@ -70,6 +70,34 @@ fs.writeFile(abd, "I have reset the Abd profile", (err)=>{
 console.log('hAhA, i am executed first'); 
 
 
-//But the problem in this way of writing asynchronous functions is that,
-//we  could see that the callback HELL is building towards right like a PYRAMID 
-//And the debugging gets difficult if this continues
+// But the problem in this way of writing asynchronous functions is that,
+// we  could see that the callback HELL is building towards right like a PYRAMID 
+// And the debugging gets difficult if this continues
+
+
+/*  ***************************************************************** */
+
+// So promises come to the RESCQUE
+
+let p = new Promise((resolve, reject)=>{
+    let a = 1+1;
+    if(a===2){
+        resolve("Success");
+    }
+    else{
+        reject("Failed");
+    }
+});
+
+p.then((message) => {
+    console.log("This is from the then: " + message);
+}).catch((message)=>{
+    console.log(`This is from the catch: ${message}`);
+})
+
+//Promises are really useful when we need to something timettaking in the background
+//like downloading image from different server and we just wanna do something meanwhile
+//and instead of we wait for it to complete, we can do smth meanwhile using promises
+//and also we can catch it using the catch statement to give user error if failed
+
+ 
